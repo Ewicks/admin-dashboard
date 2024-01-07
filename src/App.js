@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
-import { browserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+
+import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
+import { Ecommerce, Calendar, Orders, Employees, Stacked, Pyramid, Customers, 
+  Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 
 import './App.css';
 
@@ -9,7 +13,7 @@ const app = () => {
   const activeMenu = false;
   return (
     <div>
-      <browserRouter>
+      <BrowserRouter>
         <div className='flex relative dark:bg-main-dark-bg'>
           <div className='fixed right-4 bottom-4' style={{ zIndex: '1000' }}>
             <TooltipComponent content='settings' position='Top'>
@@ -54,24 +58,25 @@ const app = () => {
               {/* Apps */}
               <Route path='/kanban' element='Kanban'/>
               <Route path='/editor' element='Editor'/>
-              <Route path='/calender' element='Calender'/>
+              <Route path='/calendar' element='Calendar'/>
               <Route path='/color-picker' element='ColorPicker'/>
 
-                {/* Charts */}
-                <Route path='/line' element='Line'/>
-                <Route path='/area' element='Area'/>
-                <Route path='/bar' element='bar'/>
-                <Route path='/pie' element='Pie'/>
-                <Route path='/financial' element='Financial'/>
-                <Route path='/pyramid' element='Pyramid'/>
-                <Route path='/stacked' element='Stacked'/>
+              {/* Charts */}
+              <Route path='/line' element='Line'/>
+              <Route path='/area' element='Area'/>
+              <Route path='/bar' element='bar'/>
+              <Route path='/pie' element='Pie'/>
+              <Route path='/financial' element='Financial'/>
+              <Route path='/pyramid' element='Pyramid'/>
+              <Route path='/spark-line' element='SparkLine'/>
+              <Route path='/stacked' element='Stacked'/>
 
             </Routes>
           </div>
 
 
         </div>
-      </browserRouter>
+      </BrowserRouter>
     </div>
 
   )
