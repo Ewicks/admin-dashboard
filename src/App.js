@@ -11,7 +11,7 @@ import { useStateContext } from './contexts/ContextProvider';
 
 import './App.css';
 
-const app = () => {
+const App = () => {
 
   const { activeMenu } = useStateContext();
 
@@ -85,4 +85,4 @@ const app = () => {
   )
 }
 
-export default app
+export default App
