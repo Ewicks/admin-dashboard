@@ -53,7 +53,7 @@ const Navbar = () => {
         icon={<RiNotification3Line />}
         />
       <TooltipComponent content='Profile' position='Bottom-Center'>
-        <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg' onClick={() => {}}>
+        <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg' onClick={() => handleClick('userProfile')}>
           <img className='rounded-full w-8 h-8' src={avatar} />
           <p>
             <span className='text-gray-400 text-14'>Hi, </span> {' '}
@@ -65,9 +65,9 @@ const Navbar = () => {
 
       </TooltipComponent>
       {isClicked.cart && <Cart />}
-      {isClicked.cart && <Chat />}
-      {isClicked.cart && <Notification />}
-      {isClicked.cart && <UserProfile />}
+      {isClicked.chat && <Chat />}
+      {isClicked.notification && <Notification />}
+      {isClicked.userProfile && <UserProfile />}
       </div>
     </div>
   )
