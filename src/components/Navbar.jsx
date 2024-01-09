@@ -28,6 +28,7 @@ const Navbar = () => {
 
   const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize } = useStateContext();
 
+  // Tracks width of window
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
 
@@ -38,6 +39,8 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  
+  // if width less than 900 hide sidebar
   useEffect(() => {
     if(screenSize <= 900) {
       setActiveMenu(false);
